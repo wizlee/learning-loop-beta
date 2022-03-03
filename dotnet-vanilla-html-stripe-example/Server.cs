@@ -36,8 +36,10 @@ namespace server.Controllers
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // This is your test secret API key.
-            StripeConfiguration.ApiKey = "sk_test_51KYAK5CjaVImKg1q14p0JVz2uH6hfLC6o1LWUUmyJBfljjYxmnQbpXdvpbDBuwUpckBvcQmlnzRo6ukb0RpB44Dj003gNN1X14";
+            // This is a public sample test API key.
+            // Don’t submit any personally identifiable information in requests made with this key.
+            // Sign in to see your own test API key embedded in code samples.
+            StripeConfiguration.ApiKey = "sk_test_CsnggH3iChIYjrFoue5y6M98";
             if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
             app.UseRouting();
             app.UseStaticFiles();

@@ -5,7 +5,7 @@ This repo contains several exploratory projects and tools
 ### Project List
 - `checkout-one-time-payment` is a sample created by using stripe CLI
   - it uses vanilla html as FE, dotnet as BE
-- `dotnet-stripe-sample` is a sample downloaded directly from [stripe quickstart page](https://stripe.com/docs/checkout/quickstart)
+- `dotnet-vanilla-html-stripe-example` is a sample downloaded directly from [stripe quickstart page](https://stripe.com/docs/checkout/quickstart)
   - it uses vanilla html as FE, dotnet as BE
 - `nextjs-prebuilt-checkout` is a sample downloaded directly from [stripe quickstart page](https://stripe.com/docs/checkout/quickstart)
   - it uses nextjs as both the FE and BE
