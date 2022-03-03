@@ -5,5 +5,8 @@
 		}
 	],
   "settings": {
+    "terminal.integrated.env.windows": {
+      "BASH_INIT_COMMAND": "conda activate learning"
+    }
   }
 }

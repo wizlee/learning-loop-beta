@@ -1,6 +1,6 @@
 ## Overview
 
-This repo contains several exploratory projects or tools
+This repo contains several exploratory projects and tools
 
 ### Project List
 - `checkout-one-time-payment` is a sample created by using stripe CLI

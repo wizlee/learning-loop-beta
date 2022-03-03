@@ -1,17 +1,46 @@
-.DS_Store
-.vscode
+**/.DS_Store
+**/.vscode
+!.vscode/extensions.json
 
-# Node files
-node_modules/
-package-lock.json
+# Dependencies
+**/node_modules/
+**/package-lock.json
+**/yarn.lock
+!/yarn.lock
+**/composer.lock
 
 # Next.js
-.next
-.vercel
-.env
-.env*.local
-next-env.d.ts
+**/.next
+**/.vercel
+**/.env*.local
+**/next-env.d.ts
 
 # output files & folder from postman-to-vscode-rest-client tool
-*collections*
+**/collections/
 postman-to-vscode-rest-client/**/*.http
+
+# Ignore dotnet build files
+**/Debug/**
+**/project-cache/**
+**/.vs/**
+**/obj/**
+
+# Ruby files
+**/Gemfile.lock
+
+# Python files
+**/__pycache__
+**/env
+**/venv
+
+# PHP files
+**/vendor
+**/logs
+
+# Java files
+**/.settings
+**/target/
+**/.classpath
+**/.factorypath
+**/.project
+**/.secrets
