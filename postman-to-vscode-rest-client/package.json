@@ -1,0 +1,15 @@
+{
+  "name": "vsrest-postman-generator",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vsrest": "./bin/index.js"
+  },
+  "author": "alfathdirk@gmail.com",
+  "license": "MIT"
+}

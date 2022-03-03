@@ -1,0 +1,17 @@
+.DS_Store
+.vscode
+
+# Node files
+node_modules/
+package-lock.json
+
+# Next.js
+.next
+.vercel
+.env
+.env*.local
+next-env.d.ts
+
+# output files & folder from postman-to-vscode-rest-client tool
+*collections*
+postman-to-vscode-rest-client/**/*.http

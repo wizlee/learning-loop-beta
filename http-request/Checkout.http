@@ -1,0 +1,202 @@
+
+@baseUrl = https://api.stripe.com/
+@token = sk_test_51KYAK5CjaVImKg1q14p0JVz2uH6hfLC6o1LWUUmyJBfljjYxmnQbpXdvpbDBuwUpckBvcQmlnzRo6ukb0RpB44Dj003gNN1X14
+@contentType = application/json
+
+
+### List all Checkout Sessions
+GET {{baseUrl}}/v1/checkout/sessions
+#	?ending_before=<string>
+#	&expand[0]=<string>
+#	&expand[1]=<string>
+#	&limit=<integer>
+#	&payment_intent=<string>
+#	&starting_after=<string>
+#	&subscription=<string>
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer {{token}}
+
+
+### Create a Session
+POST {{baseUrl}}/v1/checkout/sessions
+Content-Type: application/x-www-form-urlencoded
+
+cancel_url=<string>
+&success_url=<string>
+# &after_expiration[recovery][enabled]=<boolean>
+# &after_expiration[recovery][allow_promotion_codes]=<boolean>
+# &allow_promotion_codes=<boolean>
+# &automatic_tax[enabled]=<boolean>
+# &billing_address_collection=<string>
+# &client_reference_id=<string>
+# &consent_collection[promotions]=<string>
+# &customer=<string>
+# &customer_creation=<string>
+# &customer_email=<string>
+# &customer_update[address]=<string>
+# &customer_update[name]=<string>
+# &customer_update[shipping]=<string>
+# &discounts[0][coupon]=<string>
+# &discounts[0][promotion_code]=<string>
+# &discounts[1][coupon]=<string>
+# &discounts[1][promotion_code]=<string>
+# &expand[0]=<string>
+# &expand[1]=<string>
+# &expires_at=<unix-time>
+# &line_items[0][adjustable_quantity][enabled]=<boolean>
+# &line_items[0][adjustable_quantity][maximum]=<integer>
+# &line_items[0][adjustable_quantity][minimum]=<integer>
+# &line_items[0][description]=<string>
+# &line_items[0][dynamic_tax_rates][0]=<string>
+# &line_items[0][dynamic_tax_rates][1]=<string>
+# &line_items[0][price]=<string>
+# &line_items[0][price_data][currency]=<string>
+# &line_items[0][price_data][product]=<string>
+# &line_items[0][price_data][product_data][name]=<string>
+# &line_items[0][price_data][product_data][description]=<string>
+# &line_items[0][price_data][product_data][images][0]=<string>
+# &line_items[0][price_data][product_data][images][1]=<string>
+# &line_items[0][price_data][product_data][metadata]=<object>
+# &line_items[0][price_data][product_data][tax_code]=<string>
+# &line_items[0][price_data][recurring][interval]=<string>
+# &line_items[0][price_data][recurring][interval_count]=<integer>
+# &line_items[0][price_data][tax_behavior]=<string>
+# &line_items[0][price_data][unit_amount]=<integer>
+# &line_items[0][price_data][unit_amount_decimal]=<decimal>
+# &line_items[0][quantity]=<integer>
+# &line_items[0][tax_rates][0]=<string>
+# &line_items[0][tax_rates][1]=<string>
+# &line_items[1][adjustable_quantity][enabled]=<boolean>
+# &line_items[1][adjustable_quantity][maximum]=<integer>
+# &line_items[1][adjustable_quantity][minimum]=<integer>
+# &line_items[1][description]=<string>
+# &line_items[1][dynamic_tax_rates][0]=<string>
+# &line_items[1][dynamic_tax_rates][1]=<string>
+# &line_items[1][price]=<string>
+# &line_items[1][price_data][currency]=<string>
+# &line_items[1][price_data][product]=<string>
+# &line_items[1][price_data][product_data][name]=<string>
+# &line_items[1][price_data][product_data][description]=<string>
+# &line_items[1][price_data][product_data][images][0]=<string>
+# &line_items[1][price_data][product_data][images][1]=<string>
+# &line_items[1][price_data][product_data][metadata]=<object>
+# &line_items[1][price_data][product_data][tax_code]=<string>
+# &line_items[1][price_data][recurring][interval]=<string>
+# &line_items[1][price_data][recurring][interval_count]=<integer>
+# &line_items[1][price_data][tax_behavior]=<string>
+# &line_items[1][price_data][unit_amount]=<integer>
+# &line_items[1][price_data][unit_amount_decimal]=<decimal>
+# &line_items[1][quantity]=<integer>
+# &line_items[1][tax_rates][0]=<string>
+# &line_items[1][tax_rates][1]=<string>
+# &locale=<string>
+# &mode=<string>
+# &payment_intent_data[application_fee_amount]=<integer>
+# &payment_intent_data[capture_method]=<string>
+# &payment_intent_data[description]=<string>
+# &payment_intent_data[metadata]=<object>
+# &payment_intent_data[on_behalf_of]=<string>
+# &payment_intent_data[receipt_email]=<string>
+# &payment_intent_data[setup_future_usage]=<string>
+# &payment_intent_data[shipping][address][line1]=<string>
+# &payment_intent_data[shipping][address][city]=<string>
+# &payment_intent_data[shipping][address][country]=<string>
+# &payment_intent_data[shipping][address][line2]=<string>
+# &payment_intent_data[shipping][address][postal_code]=<string>
+# &payment_intent_data[shipping][address][state]=<string>
+# &payment_intent_data[shipping][name]=<string>
+# &payment_intent_data[shipping][carrier]=<string>
+# &payment_intent_data[shipping][phone]=<string>
+# &payment_intent_data[shipping][tracking_number]=<string>
+# &payment_intent_data[statement_descriptor]=<string>
+# &payment_intent_data[statement_descriptor_suffix]=<string>
+# &payment_intent_data[transfer_data][destination]=<string>
+# &payment_intent_data[transfer_data][amount]=<integer>
+# &payment_intent_data[transfer_group]=<string>
+# &payment_method_options[acss_debit][currency]=<string>
+# &payment_method_options[acss_debit][mandate_options][custom_mandate_url]=<string>
+# &payment_method_options[acss_debit][mandate_options][default_for][0]=<string>
+# &payment_method_options[acss_debit][mandate_options][default_for][1]=<string>
+# &payment_method_options[acss_debit][mandate_options][interval_description]=<string>
+# &payment_method_options[acss_debit][mandate_options][payment_schedule]=<string>
+# &payment_method_options[acss_debit][mandate_options][transaction_type]=<string>
+# &payment_method_options[acss_debit][verification_method]=<string>
+# &payment_method_options[boleto][expires_after_days]=<integer>
+# &payment_method_options[oxxo][expires_after_days]=<integer>
+# &payment_method_options[wechat_pay][client]=<string>
+# &payment_method_options[wechat_pay][app_id]=<string>
+# &payment_method_types[0]=<string>
+# &payment_method_types[1]=<string>
+# &phone_number_collection[enabled]=<boolean>
+# &setup_intent_data[description]=<string>
+# &setup_intent_data[metadata]=<object>
+# &setup_intent_data[on_behalf_of]=<string>
+# &shipping_address_collection[allowed_countries][0]=<string>
+# &shipping_address_collection[allowed_countries][1]=<string>
+# &shipping_options[0][shipping_rate]=<string>
+# &shipping_options[0][shipping_rate_data][display_name]=<string>
+# &shipping_options[0][shipping_rate_data][delivery_estimate][maximum][unit]=<string>
+# &shipping_options[0][shipping_rate_data][delivery_estimate][maximum][value]=<integer>
+# &shipping_options[0][shipping_rate_data][delivery_estimate][minimum][unit]=<string>
+# &shipping_options[0][shipping_rate_data][delivery_estimate][minimum][value]=<integer>
+# &shipping_options[0][shipping_rate_data][fixed_amount][amount]=<integer>
+# &shipping_options[0][shipping_rate_data][fixed_amount][currency]=<string>
+# &shipping_options[0][shipping_rate_data][metadata]=<object>
+# &shipping_options[0][shipping_rate_data][tax_behavior]=<string>
+# &shipping_options[0][shipping_rate_data][tax_code]=<string>
+# &shipping_options[0][shipping_rate_data][type]=<string>
+# &shipping_options[1][shipping_rate]=<string>
+# &shipping_options[1][shipping_rate_data][display_name]=<string>
+# &shipping_options[1][shipping_rate_data][delivery_estimate][maximum][unit]=<string>
+# &shipping_options[1][shipping_rate_data][delivery_estimate][maximum][value]=<integer>
+# &shipping_options[1][shipping_rate_data][delivery_estimate][minimum][unit]=<string>
+# &shipping_options[1][shipping_rate_data][delivery_estimate][minimum][value]=<integer>
+# &shipping_options[1][shipping_rate_data][fixed_amount][amount]=<integer>
+# &shipping_options[1][shipping_rate_data][fixed_amount][currency]=<string>
+# &shipping_options[1][shipping_rate_data][metadata]=<object>
+# &shipping_options[1][shipping_rate_data][tax_behavior]=<string>
+# &shipping_options[1][shipping_rate_data][tax_code]=<string>
+# &shipping_options[1][shipping_rate_data][type]=<string>
+# &submit_type=<string>
+# &subscription_data[application_fee_percent]=<number>
+# &subscription_data[default_tax_rates][0]=<string>
+# &subscription_data[default_tax_rates][1]=<string>
+# &subscription_data[items][0][plan]=<string>
+# &subscription_data[items][0][quantity]=<integer>
+# &subscription_data[items][0][tax_rates][0]=<string>
+# &subscription_data[items][0][tax_rates][1]=<string>
+# &subscription_data[items][1][plan]=<string>
+# &subscription_data[items][1][quantity]=<integer>
+# &subscription_data[items][1][tax_rates][0]=<string>
+# &subscription_data[items][1][tax_rates][1]=<string>
+# &subscription_data[metadata]=<object>
+# &subscription_data[transfer_data][destination]=<string>
+# &subscription_data[transfer_data][amount_percent]=<number>
+# &subscription_data[trial_end]=<unix-time>
+# &subscription_data[trial_period_days]=<integer>
+# &tax_id_collection[enabled]=<boolean>
+
+### Retrieve a Session
+GET {{baseUrl}}/v1/checkout/sessions/:session
+#	?expand[0]=<string>
+#	&expand[1]=<string>
+Content-Type: application/x-www-form-urlencoded
+
+
+### Expire a Session
+POST {{baseUrl}}/v1/checkout/sessions/:session/expire
+Content-Type: application/x-www-form-urlencoded
+
+# expand[0]=<string>
+# &expand[1]=<string>
+
+### Retrieve a Session's line items
+GET {{baseUrl}}/v1/checkout/sessions/:session/line_items
+#	?ending_before=<string>
+#	&expand[0]=<string>
+#	&expand[1]=<string>
+#	&limit=<integer>
+#	&starting_after=<string>
+Content-Type: application/x-www-form-urlencoded
+
+
