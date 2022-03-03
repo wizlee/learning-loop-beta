@@ -39,7 +39,7 @@ namespace server.Controllers
             // This is a public sample test API key.
             // Don’t submit any personally identifiable information in requests made with this key.
             // Sign in to see your own test API key embedded in code samples.
-            StripeConfiguration.ApiKey = "sk_test_CsnggH3iChIYjrFoue5y6M98";
+            StripeConfiguration.ApiKey = "sk_test_51KYAK5CjaVImKg1q14p0JVz2uH6hfLC6o1LWUUmyJBfljjYxmnQbpXdvpbDBuwUpckBvcQmlnzRo6ukb0RpB44Dj003gNN1X14";
             if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
             app.UseRouting();
             app.UseStaticFiles();
