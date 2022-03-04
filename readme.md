@@ -1,8 +1,11 @@
 ## Overview
 
-This repo contains several exploratory projects and tools
+> This repo is to document all learning process during the first week of the Learning Loop program.
 
-### Project List
+The original aim is to use Dotnet as the backend and Angular as the frontend. However, along the process also explored NextJS to learn more about its features.
+
+### Folder List
+Try to contained each learning inside a folder. Below are the brief description for each of them.
 - `checkout-one-time-payment` is a sample created by using stripe CLI
   - it uses vanilla html as FE, dotnet as BE
 - `dotnet-vanilla-html-stripe-example` is a sample downloaded directly from [stripe quickstart page](https://stripe.com/docs/checkout/quickstart)
@@ -28,4 +31,9 @@ This repo contains several exploratory projects and tools
     - Use `DotnetAngularStripeExample` as it's project name
     - Create the project inside a new folder called `dotnet-angular-stripe-example`
   2. `cd dotnet-angular-stripe-example`
-  3. TBC
+  3. The angular app that comes with the template is Angular 8, we are going to [upgrade it to Angular 12](https://www.freecodespot.com/blog/angular-with-dotnet-core-web-api/).
+  4. To do that, we can either use [`ng update`](https://update.angular.io/?v=8.2-13.0) or recreate it using `ng new`. This project uses the later method.
+  5. First, remove ClientApp folder by running `rm -rf ClientApp/`.
+  6. Re-create the Angular App by running `ng new ClientApp --defaults=true --minimal=true`.
+  7. TBC...
+  
